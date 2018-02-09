@@ -63,18 +63,20 @@ function merge(a,b) {
             
             c[k]=a[i];
            
-            i++;
+            i++;}
             // console.log(c);
             
-        }else if(i%2!==0){
-            c[k]=a[i];
-        }
+        // }else if(i%2!==0){
+        //     c[k]=a[i];
+        // }
         
         
         else  {
             c[k]=b[j];
-            i++;
+            k++;
+            c[k]=a[i];
             j++;
+            i++;
             // console.log(c);
             
         } 
