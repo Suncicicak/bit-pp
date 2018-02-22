@@ -1,13 +1,10 @@
 "use strict";
 
 (function() {
-    
-
     function Product(name, price, expirationDate) {
 
         this.id = (function() {
             var productId = Math.floor(Math.random()*90000) + 10000;
-            //proveri ovo sa brojevima
             return productId;
         })();
         this.name = name;
@@ -25,7 +22,6 @@
     function ShoppingBag() {
 
         this.list = [];
-
         
         this.addProduct = function (product){
             var currentDate = new Date();
@@ -39,9 +35,13 @@
         this.getAverage = function() {
             var sum = 0;
             var mean;
-            for (var i = 0; i < this.list.length; i++) {
-                sum += this.list[i].price;
-            }
+            // for (var i = 0; i < this.list.length; i++) {
+            //     sum += this.list[i].price;
+            // }
+            this.list.forEach(function(product) {
+                sum += product.price;
+            })
+        
             mean = sum / this.list.length;
 
             return mean.toFixed(3);
@@ -53,17 +53,20 @@
                 var product =  this.list[i];
 
                 if (max < product.price) {
-                    max = product.price;
+                    max =product.price;
                 }
             } 
             return max;
         }
-
         this.calculateTotalPrice = function() {
             var sum = 0;
-            for (var i = 0; i < this.list.length; i++) {
-                sum += this.list[i].price;
-            }
+
+            // for (var i = 0; i < this.list.length; i++) {
+            //     sum += this.list[i].price;
+            // }
+            this.list.forEach(function(product) {
+                sum += product.price;
+            });
             return sum;
         }
     }
