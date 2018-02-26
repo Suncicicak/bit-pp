@@ -5,9 +5,7 @@
         function Person(name, surname) {
             this.name = name;
             this.surname = surname;
-            this.getData = function () {
-                return (this.name + ' ' + this.surname).toString();
-           }
+
         }
 
         function Seat(seatNumber, category) {
@@ -26,7 +24,7 @@
             }
         }
 
-       function Flight(relation, date) {
+        function Flight(relation, date) {
             this.relation = relation;
             this.listOfPassengers = [];
             this.date = date;
@@ -55,12 +53,14 @@
             return new Flight(relation,date);
         }
         function createPassanger (name, surname,seatNumber,category) {
-           var newPerson =  new Person(name, surname);
+            var newPerson =  new Person(name, surname);
             var newSeat = new Seat ( seatNumber, category);
             return new Passenger (newPerson, newSeat);
-       }
+        }
 
-
+        Person.prototype = function() {
+            ge
+        }
 
         var suncica = new Person ("Suncica", "Tomic");
         var seat1 = new Seat ();
@@ -69,7 +69,7 @@
         var flight2 = new Flight("Belgrade - London", "3 August 2018");
         var airport = new Airport();
         var flight3 = createFlight ("Belgrade - Tokyo","5 8 2018");
-        // flight1.addPassenger(passenger1);
+        flight1.addPassenger(passenger1);
         airport.addFlight(flight1);
         airport.addFlight(flight2);
         var bikiPassanger = createPassanger ("Milos", "Birovljevic");
@@ -78,4 +78,10 @@
 
 
         console.log(bikiPassanger.seat);
+        
+        
+        
+        
+
+
     })();
