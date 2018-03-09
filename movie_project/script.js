@@ -35,7 +35,7 @@ btn.addEventListener('click', function () {
     var div = document.querySelector(".movie-list");
     var moviesLength = document.querySelector("#movies-length");
     var isValid = false;
-    // emptyMovieArray.push(movie.getData(title, length, genre).toString());
+
 
     if (title == "") {
         p.innerHTML = "Enter title!!!";
@@ -46,11 +46,7 @@ btn.addEventListener('click', function () {
     } else if (genre == "") {
         p.innerHTML = "Enter genre!!!";
     } 
-    //DEBAGUJ OVO NOLE!!!
-    // else if (emptyMovieArray.indexOf(movie.getData(title, length, genre).toString()) == "-1") {
-    //     p.innerHTML = "Movie already exists!!!"
     
-    // }
     
     else {
         p.innerHTML = "";
@@ -64,7 +60,7 @@ btn.addEventListener('click', function () {
 
         div.innerHTML += "<p class='movie-item'>" + movie.getData(title, length, genre).toString() + "</p>";
 
-        /////
+
 
 
         pushMovieOnList.innerHTML += "<option>" + div.lastElementChild.textContent + "</option>";
@@ -74,7 +70,7 @@ btn.addEventListener('click', function () {
 });
 
 
-///////////////////////////////////////
+
 
 
 
@@ -121,7 +117,6 @@ createProgramBtn.addEventListener('click', function () {
     }
 })
 
-////////////////////////////////////////
 
 addMovieToProgramBtn.addEventListener("click", function () {
     var selectedIndexOfMovie = pushMovieOnList.selectedIndex;

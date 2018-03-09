@@ -80,6 +80,7 @@ const integerFilter = (...args) => {
     return filterInteger1;
 }
 
+
 console.log(integerFilter(23, 11.5, 9, 'abc', 45, 28, 553));
 
 //8. Write a function that returns indexes of the elements greater than 10. 
@@ -90,6 +91,7 @@ const biggerThanTen = (arr) => {
         if (e > 10) {
             return i;
         }
+        
     })
 
     var newArr = filteredIndex.filter(e => Number.isInteger(e));
