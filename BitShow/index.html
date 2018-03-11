@@ -16,16 +16,29 @@
         <p>BitShow</p>
         <form class="form-inline ml-auto my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <ul id="select" > 
+                <li></li>
+                <li></li>
+                <li></li>
+                
+              
+            </ul>
         </form>
         </div>
     </nav>
+    <h1>
+        Popular Shows
+    </h1>
+    <div id="div" class="row">
+
+    </div>
 
 
 
 
 
-    <footer>
-        <p>Copyright© Bit Student 2017</p>
+    <footer id="footer">
+        <p data-bla="[2,43,4,]" class="">Copyright© Bit Student 2017</p>
     </footer>
 
 
@@ -34,11 +47,16 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
-    <script src="UIController.js"></script>
-    <script src="dataController.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+    <script src="js/UIController.js"></script>
+    <script src="js/dataController.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+       mainModule.ready();
+       mainModule.search();
+       mainModule.showSingleShow();
+    </script>
 </body>
 
 </html>
