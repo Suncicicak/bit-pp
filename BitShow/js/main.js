@@ -1,3 +1,4 @@
+//ovde napravi IIF
 const mainModule = (function (uim, dataModule) {
     var listOfShow = [];
     let seasoNs = [];
@@ -117,6 +118,11 @@ const mainModule = (function (uim, dataModule) {
                 })
                 
                 listOfShow[0] = shows
+                let SHOW = listOfShow[0];
+                console.log(SHOW.name);
+                console.log(SHOW);
+
+                uim.singleShow(SHOW.imageUrl,SHOW.name, SHOW.seasons, SHOW.casts, SHOW.detalis, SHOW.seasons, SHOW.casts )
                 
                 
               
@@ -127,19 +133,13 @@ const mainModule = (function (uim, dataModule) {
             
         };
 
-        function ja () {
-           console.log(listOfShow[0]);
-           
-            
-        }
-
+          
     return {
         ready,
         search,
         showSingleShow,
         singleShowPresented,
-        ja
-        // bla
+        
         
     }
 

@@ -5,28 +5,28 @@ const UIModule = (function () {
     };
 
     const appendLi = function (param) {
-        let empty = '';
+        let empty = $('#seasonsUl');
         param.forEach(element => {
-            empty.innerHTML += '<li>'+ element.startDate + " " + element.endDate + '</li>';
+            empty.append('<li>'+ element.startDate + " " + element.endDate + '</li>');
         });
-        return empty
+        
     } 
     const appendCast = function (param) {
-        let empty = '';
+        let empty =  $('#castUl');
         param.forEach(element => {
-            empty.innerHTML += '<li>'+ element.name + '</li>';
+            empty.append('<li>'+ element + '</li>');
         });
-        return empty
+        
     } 
 
 
-    const singleShow = function ({imgUrl, name, seasons, cast, details}, param, param2 ) {
-        $('#poster').attr('src', imgUrl);
-        $('.single-h2').html(name);
-        $('#seasons').html("Seasons" + seasons.length);
-        $('#seasonsUl').append(appendLi(param));
-        $('#castUl').append(appendCast(param2));
-        $('#details').html(details);
+    const singleShow = function (imgageUrl, name, seasons, cast, details, param, param2 ) {
+        $('#poster').attr('src', imgageUrl);
+        $('#single-h2').html("" + name);
+        $('#seasons').html("Seasons (" + seasons.length + ")");
+        appendLi(param);
+        appendCast(param2);
+        $('#details').html("" + details);
     }
 
     const searchShow = function (name) {

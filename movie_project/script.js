@@ -1,4 +1,4 @@
-function Movie(title, length, genre) {
+const Movie = (title, length, genre) => {
     this.title = title;
     this.length = length;
     this.genre = genre;
